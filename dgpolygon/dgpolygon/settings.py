@@ -61,9 +61,9 @@ WSGI_APPLICATION = 'dgpolygon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', #django.contrib.gis.db.backends.mysql
-        'NAME': 'dgpolygon',
-        'USER': 'root',
-        'PASSWORD': '123456'
+        'NAME': os.environ['DGPOLYGON_DB'] , #'dgpolygon'
+        'USER': os.environ['DGPOLYGON_USER'], #'root'
+        'PASSWORD': os.environ['DGPOLYGON_PASS'] #'123456'
     }
 }
 

@@ -11,9 +11,19 @@ Install Python 2.7.3 and PIP, to see full details about how to install all to ge
 If you already works with python and pip:
 * pip install Django==1.7.1
 
+Then clone this project:
+* git clone git@github.com:mariohmol/django-google-polygon.git
 
+Aditional libs:
+* apt-get install binutils libproj-dev gdal-bin python-mysqldb mysql-client-core-5.6
+* pip install MySQL-python
 
-Check the database settings at:
+Configure database setting using environment, example:
+* export DGPOLYGON_DB=dgpolygon
+* export DGPOLYGON_USER=root
+* export DGPOLYGON_PASS=123456
+
+Or force it at:
 * settings.py
 
 To create initial database, use:
@@ -33,8 +43,6 @@ To run use the command above and it will be available at localhost:8000 :
 Launch a EC2, here i'm using  Ubuntu Server 14.04 LTS (HVM), t2.micro instance and use all default options.
 Launch a RDS , for testing choose a No Multi-AZ Deployment and all minimal requirements. 
 
-Aditional libs:
-* apt-get install binutils libproj-dev gdal-bin
 
 # Development 
 
