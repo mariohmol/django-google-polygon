@@ -19,6 +19,7 @@ Aditional libs:
 * pip install MySQL-python
 
 Configure database setting using environment, example:
+* export DGPOLYGON_HOST=localhost
 * export DGPOLYGON_DB=dgpolygon
 * export DGPOLYGON_USER=root
 * export DGPOLYGON_PASS=123456
