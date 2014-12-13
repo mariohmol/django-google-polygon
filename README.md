@@ -15,7 +15,7 @@ Then clone this project:
 * git clone git@github.com:mariohmol/django-google-polygon.git
 
 Aditional libs:
-* apt-get install binutils libproj-dev gdal-bin python-mysqldb mysql-client-core-5.6
+* apt-get install binutils libproj-dev gdal-bin python-mysqldb mysql-client-core-5.6 mysql-client-5.6
 * pip install MySQL-python
 
 Configure database setting using environment, example:
@@ -44,6 +44,10 @@ To run use the command above and it will be available at localhost:8000 :
 Launch a EC2, here i'm using  Ubuntu Server 14.04 LTS (HVM), t2.micro instance and use all default options.
 Launch a RDS , for testing choose a No Multi-AZ Deployment and all minimal requirements. 
 
+
+In security group free those ports for Inboud:
+* 3306
+* 80
 
 # Development 
 
