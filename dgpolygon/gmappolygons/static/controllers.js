@@ -20,17 +20,17 @@ angular.module('gmappolygons.controllers', []).controller('MainCtrl', function($
 	$scope.areaid = $routeParams.areaid;
 	initialize(true);
 
-	$scope.search = function() {
+	$scope.search = function(areaid) {
 		if (uniquemarker==null || uniquemarker.position ==null) {
 			alert("You must select a point to search if is in the area or not");
 			return;
 		}
-		MapService.search(uniquemarker.position.D, uniquemarker.position.k).then(function(data) {
+		MapService.search(uniquemarker.position.D, uniquemarker.position.k,areaid).then(function(data) {
 			alert(data);
 		});
 
 	};
-
+	
 	$scope.show = function(id) {
 		$location.path('show/' + id);
 

@@ -39,8 +39,8 @@ angular.module('gmappolygons.services', []).factory('MapService', function($http
 				return result.data;
 			});
 		},
-		search : function(lat, lng) {
-			data = serializeData({point: lat+" "+lng});
+		search : function(lat, lng,areaid) {
+			data = serializeData({point: lat+" "+lng, areaid: areaid});
 			
 			return $http({
 				url : "/gmappolygons/search/",

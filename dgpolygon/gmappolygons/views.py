@@ -11,7 +11,12 @@ def index(request):
 def search(request):   
     point=request.POST.get("point", "")
     pointTxt='POINT('+point+')'     #pointTxt='POINT(-0.87890625 52.696361078274485)'
-    result = Area.objects.filter(poly__contains=pointTxt)    
+    areaid=request.POST.get("areaid", "")
+    if areaid=="":
+        result = Area.objects.filter(poly__contains=pointTxt)
+    else:
+        result = Area.objects.filter(poly__contains=pointTxt,id=int(areaid))
+            
     if result:      #result[0].name
         return HttpResponse("Your location is inside our service area!")
     return HttpResponse("Sorry but your location is out of our service area!")
