@@ -51,7 +51,8 @@ In security group free those ports for Inboud:
 
 # Development 
 
-
+Create migrations when change models:
+* python manage.py makemigrations
 
 To create the database do: 
 * python manage.py sqlmigrate gmappolygons 0001

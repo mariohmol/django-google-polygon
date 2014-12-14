@@ -1,11 +1,28 @@
 <html>
-<head>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-{% block head %}{% endblock %}
-</head>
-<body style="margin:0px; padding:0px;" onload="initialize()">
+	<head>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
-{% block content %}{% endblock %}
+		{% block head %}{% endblock %}
+	</head>
+	<body ng-app="gmappolygons" style="margin:0px; padding:0px;">
 
-</body>
+		<ng-view>
+
+			{% block content %}{% endblock %}
+
+		</ng-view>
+
+		<script src="/static/js/angular.min.js"></script>
+		<script src="/static/js/angular-resource.min.js"></script>
+		<script src="/static/js/angular-route.min.js"></script>
+
+		<!--
+
+		<script type="text/javascript" src="/static/js/responsive-directive.js"></script>
+		-->
+		<script type="text/javascript" src="/static/app.js"></script>
+		<script type="text/javascript" src="/static/services.js"></script>
+		<script type="text/javascript" src="/static/controllers.js"></script>
+
+	</body>
 </html>

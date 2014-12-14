@@ -4,7 +4,7 @@ from gmappolygons import views
 
 urlpatterns = patterns('',
    url(r'^$', views.index, name='index'),
-   url(r'^add', views.add, name='add'),
-   url(r'^submit', views.submit, name='submit'),
+   url(r'^search', views.search, name='search'),
+   url(r'^submit/$', views.submit, name='submit'),
    url(r'^show/(?P<area_id>\d+)/', views.show, name='show'),
 )

@@ -60,7 +60,7 @@ WSGI_APPLICATION = 'dgpolygon.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', #django.contrib.gis.db.backends.mysql
+        'ENGINE': 'django.contrib.gis.db.backends.mysql', #simple: django.db.backends.mysql or gis adv: django.contrib.gis.db.backends.mysql
         'HOST': os.environ['DGPOLYGON_HOST'] , #'127.0.0.1',
         'NAME': os.environ['DGPOLYGON_DB'] , #'dgpolygon'
         'USER': os.environ['DGPOLYGON_USER'], #'root'
