@@ -38,11 +38,9 @@ angular.module('gmappolygons.controllers', []).controller('MainCtrl', function($
 
 }).controller('ShowCtrl', function($scope, $location, $routeParams, MapService) {
 
-	var areaid = $routeParams.areaid;
-	$scope.areaid=areaid;
+	$scope.areaid = $routeParams.areaid;
 	
-	MapService.show(areaid).then(function(data) {
-		console.log(data.data);
+	MapService.show($scope.areaid).then(function(data) {
 		polyService = JSON.parse(data.data['polygons'])
 		var paths = coord_to_paths(polyService.coordinates);
 		showmap(paths);

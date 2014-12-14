@@ -128,16 +128,19 @@ function initialize(search) {
 		mapTypeId : google.maps.MapTypeId.SATELLITE
 	});
 
-	poly = new google.maps.Polygon({
-		strokeWeight : 3,
-		fillColor : '#5555FF'
-	});
-	poly.setMap(map);
-	poly.setPaths(new google.maps.MVCArray([path]));
 	if (search != null)
 		google.maps.event.addListener(map, 'click', addUniquePoint);
-	else
+	else {
+
+		poly = new google.maps.Polygon({
+			strokeWeight : 3,
+			fillColor : '#5555FF'
+		});
+		poly.setMap(map);
+		poly.setPaths(new google.maps.MVCArray([path]));
 		google.maps.event.addListener(map, 'click', addPoint);
+	}
+
 }
 
 function showmap(polyPath) {
